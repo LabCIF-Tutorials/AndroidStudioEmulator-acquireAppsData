@@ -12,7 +12,12 @@ This page shows how to use the the adb command line tool to install apps inside 
   - [3.1 Exercise](#31-exercise)
 
 
-
+> ***NOTE***
+> 
+> These exercises require Android Studio Emulator to be installed:
+> 
+> - [Set up Android Studio Emulator with GUI](https://labcif.github.io/AndroidStudioEmulator-GUIconfig/)
+> - [Set up Android Studio Emulator **without** GUI (cmd-tools)](https://labcif.github.io/AndroidStudioEmulator-cmdConfig/#5-exercise)
 
 
 ## 1. Install apps
