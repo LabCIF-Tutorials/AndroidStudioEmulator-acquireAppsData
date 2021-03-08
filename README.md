@@ -2,9 +2,11 @@
 
 This page shows how to use the the adb command line tool to install apps inside the Android emulator and then how to get the files produced by them to later perform a digital forensics analysis.
 
-> ![by-nc-sa](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
-> 
-> This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+|-------------------------|-------------------------|
+| ![by-nc-sa](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png) |
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)|
+
+## Table of Contents <!-- omit in toc -->
 
 - [1. Install apps](#1-install-apps)
   - [1.1 Exercise](#11-exercise)
