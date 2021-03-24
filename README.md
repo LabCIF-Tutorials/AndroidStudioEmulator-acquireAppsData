@@ -111,12 +111,20 @@ generic_x86_64_arm64:/ # cd /data/data/<app dir>
 user@linux:ANDROID_HOME/platform-tools$ adb shell
 generic_x86_64_arm64:/ $ su
 generic_x86_64_arm64:/ # cd /data/data/
-generic_x86_64_arm64:/ # tar -cvzf /sdcard/Download/<compressed filename>.tgz <app folder>/
-generic_x86_64_arm64:/ # exit
-generic_x86_64_arm64:/ $ exit
+generic_x86_64_arm64:/data/data/ # tar -cvzf /sdcard/Download/<compressed-filename>.tgz <app-folder>/
+generic_x86_64_arm64:/data/data/ # exit
+generic_x86_64_arm64:/data/data/ $ exit
 ```
 
-> **_NOTE_**
+If there are file names, or directories with *spaces* on their names the regular `tar` command (as shown above) will fail. Instead try this approach:
+
+```console
+generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/Download/<filename>.tar --null -T -
+```
+
+
+
+> **_NOTE 2_**
 >
 > Don't copy the files directly to your computer with `adb pull` command, specially if you're using Windows, because you might loose information:
 > 
