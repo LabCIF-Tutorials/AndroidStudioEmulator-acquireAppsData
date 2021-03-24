@@ -116,11 +116,11 @@ generic_x86_64_arm64:/data/data/ # exit
 generic_x86_64_arm64:/ $ exit
 ```
 
-If there are file names, or directories with *spaces* on their names the regular `tar` command (as shown above) will fail. Instead try this approach:
+    If there are file names, or directories with *spaces* on their names the regular `tar` command (as shown above) will fail. Instead try this approach:
 
-```console
-generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/Download/<filename>.tar --null -T -
-```
+    ```console
+    generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/Download/<filename>.tar --null -T -
+    ```
 
 
 
@@ -139,9 +139,9 @@ user@linux:ANDROID_HOME/platform-tools$ adb pull /sdcard/Download/<compressed fi
 /sdcard/Download/<compressed filename>.tgz: 1 file pulled. 0.1 MB/s (180 bytes in 0.010s)
 ```
 
-3. If you're using Windows set up first a Linux VM, and copy the `<compressed filename>.tgz` inside the VM to avoid losing data during the decompression (see the note above)
+3. If you're using Windows set up first a Linux VM, and copy the `<compressed-filename>.tgz` inside the VM to avoid losing data during the decompression (see the note above)
 
-4. Decompress the file with `tar -xvzf <compressed filename>.tgz`, or other tool that supports `.tgz` files, and start the analysis
+4. Decompress the file with `tar -xvzf <compressed-filename>.tgz`, or other tool that supports `.tgz` files, and start the analysis
 
 ### 3.1 Exercise
 
