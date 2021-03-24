@@ -116,11 +116,11 @@ generic_x86_64_arm64:/data/data/ # exit
 generic_x86_64_arm64:/ $ exit
 ```
 
-    If there are file names, or directories with *spaces* on their names the regular `tar` command (as shown above) will fail. Instead try this approach:
+If there are file names, or directories with *spaces* on their names the regular `tar` command (as shown above) will fail. Instead try this approach:
 
-    ```console
-    generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/Download/<filename>.tar --null -T -
-    ```
+```console
+generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/Download/<filename>.tar --null -T -
+```
 
 
 
