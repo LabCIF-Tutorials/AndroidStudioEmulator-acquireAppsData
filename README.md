@@ -124,7 +124,7 @@ generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/
 
 
 
-> **_NOTE 2_**
+> **_NOTE_**
 >
 > Don't copy the files directly to your computer with `adb pull` command, specially if you're using Windows, because you might loose information:
 > 
