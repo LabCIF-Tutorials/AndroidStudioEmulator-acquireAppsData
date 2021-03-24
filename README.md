@@ -113,7 +113,7 @@ generic_x86_64_arm64:/ $ su
 generic_x86_64_arm64:/ # cd /data/data/
 generic_x86_64_arm64:/data/data/ # tar -cvzf /sdcard/Download/<compressed-filename>.tgz <app-folder>/
 generic_x86_64_arm64:/data/data/ # exit
-generic_x86_64_arm64:/data/data/ $ exit
+generic_x86_64_arm64:/ $ exit
 ```
 
 If there are file names, or directories with *spaces* on their names the regular `tar` command (as shown above) will fail. Instead try this approach:
