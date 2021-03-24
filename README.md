@@ -123,10 +123,9 @@ generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/
 ```
 
 
-
 > **_NOTE_**
 >
-> Don't copy the files directly to your computer with `adb pull` command, specially if you're using Windows, because you might loose information:
+> Always use `tar`, don't copy the files directly to your computer, specially if you're using Windows, because you might loose information:
 > 
 > - For example, the files `file.txt` and `File.txt` are two different files under Linux (Android uses a Linux kernel) but are the same file under Windows
 > - Windows doesn't recognizes Linux's links
