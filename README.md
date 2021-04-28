@@ -118,7 +118,7 @@ Some software tools that perform automated static analysis of `APK` files, like 
 >
 > On Android 11 the `<app dir>` is inside an extra dir also with several random characters encoded in Base64, for example: `/data/app/~~ZILWitQqXEB3uiTnOKhlvg==/com.google.android.apps.authenticator2-h-U8jQG_YWGWCGK3XeVWog==/base.apk`
 > 
-> This Base64 encoded characters are used to prevent apps to get a list of all the installed in a device.
+> These Base64 encoded characters are used to prevent apps to get a list of all the installed apps in a device.
 
 ## 3. Extract data
 
