@@ -13,6 +13,7 @@ This page shows how to use the the adb command line tool to install apps inside 
 - [2. Important directories](#2-important-directories)
   - [2.1 Public data](#21-public-data)
   - [2.2 Private data](#22-private-data)
+  - [2.3 APK Files](#23-apk-files)
 - [3. Extract data](#3-extract-data)
   - [3.1 Exercise](#31-exercise)
 
@@ -61,6 +62,7 @@ Apps generate data into two locations:
 
 - **Public data directory** -- data that is available even on non-rooted devices
 - **Private data directory** -- data that is only available with root
+- **APK files** -- binary files of the installed app
 
 Next we show the location of each of these directories.
 
@@ -103,6 +105,21 @@ generic_x86_64_arm64:/ $ su
 generic_x86_64_arm64:/ # cd /data/data/<app dir>
 ```
 
+### 2.3 APK Files
+
+Some software tools that perform automated static analysis of `APK` files, like [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF), don't support multi-part pakages. A multi-part package is an `APK` with several `APK` files inside. One way to solve this problem is:
+
+- install the app, then
+- copy the main `APK` file: `/data/app/<app dir>/base.apk`
+
+> **_NOTE_**
+>
+> Since Android 8 the `<app dir>` will contain a sufix with several random characters encoded in Base64, for example: `/data/app/com.google.android.apps.authenticator2-h-U8jQG_YWGWCGK3XeVWog==/base.apk`.
+>
+> On Android 11 the `<app dir>` is inside an extra dir also with several random characters encoded in Base64, for example: `/data/app/~~ZILWitQqXEB3uiTnOKhlvg==/com.google.android.apps.authenticator2-h-U8jQG_YWGWCGK3XeVWog==/base.apk`
+> 
+> This Base64 encoded characters are used to prevent apps to get a list of all the installed in a device.
+
 ## 3. Extract data
 
 1. Connect to the Android emulator and follow the steps bellow to create a `tgz` file with the contents of the private directory af an app:
@@ -121,7 +138,6 @@ If there are file names, or directories with *spaces* on their names the regular
 ```console
 generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/Download/<filename>.tar --null -T -
 ```
-
 
 > **_NOTE_**
 >
