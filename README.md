@@ -170,6 +170,22 @@ user@linux:ANDROID_HOME/platform-tools$ adb pull /sdcard/Download/<compressed fi
 >
 > ```console
 > user@linux:~$ ./aquisition.sh us.zoom.videomeetings
+> [Info ] Does "us.zoom.videomeetings" exist?
+> [Info ] Yes!
+> [Info ] Getting the version of "us.zoom.videomeetings"...
+> [Info ] The version is "5.9.3.4247".
+> [Info ] Copying data from "us.zoom.videomeetings" version "5.9.3.4247" ...
+> removing leading '/' from member names
+> data/user_de/0/us.zoom.videomeetings/
+> ...
+> [Info ] Copy terminated.
+> [Info ] Compressing "us.zoom.videomeetings--u0-v5.9.3.4247--2022.02.10T15.52.57.tar" ...
+> [Info ] Compressing terminated.
+> [Info ] Copying to local storage...
+> /sdcard/Download/us.zoom.videomeetings--u0-v5.9.3.4247--202....tar.gz: 1 file pulled. 25.8 MB/s (4590475 bytes in 0.170s)
+> [Info ] Copy terminated.
+> [Info ] Cleaning acquisition files from phone...
+> [Info ] Clean terminated.
 > ```
 
 
