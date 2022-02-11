@@ -45,12 +45,16 @@ user@linux:ANDROID_HOME/platform-tools$ adb install com.google.android.apps.auth
 Success
 ```
 
+> ***NOTE***
+>
+> It is also possible to install an alternative to Google's Play store. One of them is [F-Droid](https://f-droid.org/), but there are many others. The install process is the same as described above.
+
 ### 1.1 Exercise
 
 Download and install the following apps:
 
-- Google Authenticator
-- Termux
+- [Google Authenticator](https://www.apkmirror.com/?s=google+authenticator)
+- [Termux](https://github.com/termux/termux-app/releases)
 
 Once the apps are installed we can interact with then to generate some data.
 
@@ -107,7 +111,7 @@ generic_x86_64_arm64:/ # cd /data/data/<app dir>
 
 ### 2.3 APK Files
 
-Some software tools that perform automated static analysis of `APK` files, like [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF), don't support multi-part pakages. A multi-part package is an `APK` with several `APK` files inside. One way to solve this problem is:
+Some software tools that perform automated static analysis of `APK` files, like [MobSF](https://github.com/MobSF/Mobile-Security-Framework-MobSF), don't support multi-part pakages. A multi-part package (or bundle) is an `APK` with several `APK` files inside. One way to solve this problem is:
 
 - install the app, then
 - copy the main `APK` file: `/data/app/<app dir>/base.apk`
@@ -147,6 +151,7 @@ generic_x86_64_arm64:/data/data/ # find <app-folder> -print0 | tar -cvf /sdcard/
 > - Windows doesn't recognizes Linux's links
 > - There are some characters that are allowed in Linux file names, but that aren't supported on Windows
 
+
 2. Copy the `tgz` file into your computer for analysis
 
 ```console
@@ -157,6 +162,16 @@ user@linux:ANDROID_HOME/platform-tools$ adb pull /sdcard/Download/<compressed fi
 3. If you're using Windows set up first a Linux VM, and copy the `<compressed-filename>.tgz` inside the VM to avoid losing data during the decompression (see the note above)
 
 4. Decompress the file with `tar -xvzf <compressed-filename>.tgz`, or other tool that supports `.tgz` files, and start the analysis
+
+
+> **_NOTE_**
+>
+> To automate the capture process check the [Android App Acquisition Script](https://github.com/labcif/AndroidAcquisitionScript) from LabCIF. It's a `bash` script that already has support for file and folder names with spaces on it, and adds the app version and a timestamp to the acquired file name. Here's an example:
+>
+> ```console
+> user@linux:~$ ./aquisition.sh us.zoom.videomeetings
+> ```
+
 
 ### 3.1 Exercise
 
